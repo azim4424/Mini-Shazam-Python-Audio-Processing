@@ -11,7 +11,7 @@ def compute_fft(segment):
     return magnitude
 
 
-fs, signal = wavfile.read("audio.wav")
+fs, signal = wavfile.read("../Audio/audio.wav")
 if len(signal.shape) > 1:
     signal = signal.mean(axis=1)
 signal = signal.astype(float)
@@ -25,6 +25,7 @@ plt.title("Full Signal (Time Domain)")
 plt.xlabel("Time (seconds)")
 plt.ylabel("Amplitude")
 plt.grid()
+plt.savefig("../images/full_signal.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 start = 5
@@ -41,6 +42,7 @@ plt.title("Clip (Time Domain)")
 plt.xlabel("Time (seconds)")
 plt.ylabel("Amplitude")
 plt.grid()
+plt.savefig("../images/clip_signal.png", dpi=300, bbox_inches="tight")  
 plt.show()
 
 clip_fft = compute_fft(clip)
@@ -50,6 +52,7 @@ plt.title("Clip Frequency Domain")
 plt.xlabel("Frequency (Hz)")
 plt.ylabel("Magnitude")
 plt.grid()
+plt.savefig("../images/clip_fft.png", dpi=300, bbox_inches="tight") 
 plt.show()
 
 window_length = len(clip)
@@ -88,6 +91,7 @@ plt.xlabel("Time (seconds)")
 plt.ylabel("Similarity Score")
 plt.legend()
 plt.grid()
+plt.savefig("../images/similarity_scores.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 detected_index = int(detected_time * fs)
@@ -103,5 +107,5 @@ plt.ylabel("Amplitude")
 
 plt.legend()
 plt.grid()
-
+plt.savefig("../images/clip_vs_detected.png", dpi=300, bbox_inches="tight")
 plt.show()
