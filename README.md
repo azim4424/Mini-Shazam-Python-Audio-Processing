@@ -24,11 +24,11 @@ The project analyzes audio signals in the frequecy domain and identifies similar
 5. Determine best match
 
 ## Results
-
+You can find the exact results in the plots inside the images folder. The last plot shows that the highest similarty score was shown at time 5 seconds which was the start of the clip. 
 
 ## How to Run
-1. Install dependencies
-2. Open the notebook
-3. Run the cells
+1. Install requirements
+2. Open the notebook or main.py
+3. Run the cells or the python file
 
-N.B: You can either run the .py file or the .ipynb (jupyter notebook) file depending on what you have installed.
+N.B: You can either run the .py file or the .ipynb (jupyter notebook) file depending on what you have installed. Please create a folder locally in your machine for the whole project with the exact same folders inside (code, images and Audio) for the .py file or the notebook to compile correctly. The images of the plots will be saved inside the images folder after running. 
