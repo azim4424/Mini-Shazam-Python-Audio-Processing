@@ -1,4 +1,5 @@
-numpy
-matplotlib
-scipy
-jupyter
+Python
+NumPy
+Matplotlib
+SciPy
+Jupyter Notebook (optional)
